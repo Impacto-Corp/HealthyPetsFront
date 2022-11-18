@@ -5,34 +5,34 @@
       <img src="src/assets/veterinaria1.jpg">
     </div>
     <div class="details">
-      <pv-card style="margin-top:10px">
+      <pv-card v-for="vet in veterinaries":key="vet.id=1" style="margin-top:10px">
         <template #content>
-          {{naming}}
+          {{vet.naming}}
+        </template>
+      </pv-card>
+      <pv-card v-for="vet in veterinaries":key="vet.id=1" style="margin-top:10px">
+        <template #content>
+          {{vet.lead_medic}}
+        </template>
+      </pv-card>
+      <pv-card v-for="vet in veterinaries":key="vet.id=1" style="margin-top:10px">
+        <template #content>
+          {{vet.addressing}}
+        </template>
+      </pv-card>
+      <pv-card v-for="vet in veterinaries":key="vet.id=1" style="margin-top:10px">
+        <template #content>
+          {{vet.phone}}
         </template>
       </pv-card>
       <pv-card style="margin-top:10px">
         <template #content>
-          {{lead_medic}}
+          {{vet.mail}}
         </template>
       </pv-card>
-      <pv-card style="margin-top:10px">
+      <pv-card v-for="vet in veterinaries":key="vet.id=1" style="margin-top:10px">
         <template #content>
-          {{addressing}}
-        </template>
-      </pv-card>
-      <pv-card style="margin-top:10px">
-        <template #content>
-          {{phone}}
-        </template>
-      </pv-card>
-      <pv-card style="margin-top:10px">
-        <template #content>
-          {{mail}}
-        </template>
-      </pv-card>
-      <pv-card style="margin-top:10px">
-        <template #content>
-          {{descrip}}
+          {{vet.descrip}}
         </template>
       </pv-card>
       <pv-button label="Registra a tu mascota aquí" class="p-button-rounded p-button-secondary"
@@ -45,13 +45,17 @@
 export default {
   data() {
     return {
-      "naming": "Veterinaria Lima",
-      "lead_medic": "Dr. Augusto Solano",
-      "addressing": "Jr. Velasquez 654, San Isidro, Lima",
-      "phone": "01 7543659",
-      "mail": "AugSol87@gmail.com",
-      "descrip": "Fundada en 1996, se especializa principalmente en atender " +
-          "emergencias veterinarias y también ofrece servicios cosméticos",
+      "veterinaries": [
+        {
+          "id": 1,
+          "naming": "Veterinaria Lima",
+          "lead_medic": "Dr. Augusto Solano",
+          "addressing": "Jr. Velasquez 654, San Isidro, Lima",
+          "phone": "01 7543659",
+          "mail": "AugSol87@gmail.com",
+          "descrip": "Fundada en 1996, se especializa principalmente en atender emergencias veterinarias y también ofrece servicios cosméticos"
+        }
+        ]
     }
   },
   name: "vet-profile.vue"
