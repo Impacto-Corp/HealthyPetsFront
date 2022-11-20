@@ -2,7 +2,7 @@
   <div class="form-demo">
     <pv-button icon="pi pi-arrow-left" class="p-button-rounded p-button-primary ml-7" @click="$router.push(':/')"/>
     <div class="flex justify-content-center ">
-      <pv-card class="card shadow-8 p-fluid" style="width: 50%">
+      <pv-card class="card shadow-8 p-fluid" style="width: 20%">
         <template #title>
           <h1 class="text-center">Register</h1>
 
@@ -91,6 +91,9 @@
 </template>
 
 <script>
+
+import {UsersApiService} from "../../profile/services/users-api.service";
+import router from "../../router";
 
 export default {
   name: "user-register.component",
