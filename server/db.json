@@ -1,0 +1,22 @@
+{
+  "veterinaries": [
+    {
+      "id": 1,
+      "naming": "Veterinaria Lima",
+      "lead_medic": "Dr. Augusto Solano",
+      "addressing": "Jr. Velasquez 654, San Isidro, Lima",
+      "phone": "01 7543659",
+      "mail": "AugSol87@gmail.com",
+      "descrip": "Fundada en 1996, se especializa principalmente en atender emergencias veterinarias y también ofrece servicios cosméticos"
+    },
+    {
+      "id": 2,
+      "naming": "Veterinaria Del Valle",
+      "lead_medic": "Dra. Ximena Duque",
+      "addressing": "Av. Próceres 1503, San Juan de Lurigancho, Lima",
+      "phone": "01 6314588",
+      "mail": "XimDu36@gmail.com",
+      "descrip": "Fundada en 2009 y reconocida por la hospitalidad de sus trabajadores y su doctora líder"
+    }
+  ]
+}
