@@ -2,7 +2,7 @@
   <div class="body">
     <div class="logoVet">
       <h2 class="gentitle">Healthy Pets</h2>
-      <img src="src/assets/veterinaria1.jpg">
+      <img src="../../assets/veterinaria1.jpg">
     </div>
     <div class="details">
       <pv-card v-for="vet in veterinaries":key="vet.id=1" style="margin-top:10px">
@@ -73,7 +73,7 @@ export default {
 .body{
   width: 100%;
   height: 100%;
-  background: url("../src/assets/fondo1.png");
+  background: url("../../assets/fondo1.png");
   display: flex;
   justify-content: center;
   gap: 150px;
