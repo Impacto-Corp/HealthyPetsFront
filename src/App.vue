@@ -1,12 +1,12 @@
 <template>
-  <user-register></user-register>
+  <vet-register></vet-register>
 
 </template>
 
 <script>
 
 import UserRegister from "./security/pages/user-register.component.vue";
-
+import VetRegister from "@/registers/pages/veterinary-register.component.vue";
 
 export default {
   data() {
@@ -17,6 +17,7 @@ export default {
 
   components: {
     UserRegister,
+    VetRegister,
   }
 }
 </script>
