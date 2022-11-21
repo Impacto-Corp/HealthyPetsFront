@@ -110,8 +110,15 @@ export default {
   margin: 0;
   padding: 0;
   font-family: montserrat;
-  background: black;
+  background: url("../../assets/FondoN.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   height: 100vh;
+  width: 100%;
+}
+
+img{
+  max-width: 100%;
 }
 .content{
   position: absolute;
