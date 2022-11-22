@@ -5,7 +5,7 @@
 
 <script>
 
-import UserRegister from "./security/pages/user-register.component.vue";
+import UserRegister from "./Security/pages/user-register.component.vue";
 import VetRegister from "@/registers/pages/veterinary-register.component.vue";
 
 export default {
