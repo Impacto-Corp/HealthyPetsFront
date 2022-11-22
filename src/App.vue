@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import MedicalRecord from "@/MedicalRecord/page/evaluationregister.component.vue"
+import MedicalRecord from "@/MedicalRecords/pages/evaluationregister.component.vue"
 
 export default {
   data() {
