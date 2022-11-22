@@ -117,9 +117,10 @@ export default {
   width: 100%;
 }
 
-img{
+.logo1{
   max-width: 100%;
 }
+
 .content{
   position: absolute;
   top:50%;
