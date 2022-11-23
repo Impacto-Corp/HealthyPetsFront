@@ -14,14 +14,14 @@ export class VetRegisterApiService{
     }
 
     update(id, data) {
-        return http.put(`/tutorials/${id}`, data);
+        return http.put(`/vetRegisters/${id}`, data);
     }
 
     delete(id) {
-        return http.delete(`/tutorials/${id}`);
+        return http.delete(`/vetRegisters/${id}`);
     }
 
     findByName(title) {
-        return http.get(`/tutorials?name=${name}`);
+        return http.get(`/vetRegisters?name=${name}`);
     }
 }

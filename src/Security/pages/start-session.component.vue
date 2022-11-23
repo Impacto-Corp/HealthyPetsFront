@@ -7,9 +7,9 @@
     </div>
 
     <div class="card">
-      <h1 class="mt-7 ml-7">Sign in to Healthy Pets</h1>
-      <hr class="ml-7">
-      <h4 class="mt-7 ml-8 mb-1"> Username or Email Address</h4>
+      <h1 class="mt-0 ml-8">Sign in to Healthy Pets</h1>
+      <hr class="ml-8">
+      <h4 class="mt-5 ml-8 mb-1"> Username or Email Address</h4>
       <span class="p-float-label ml-8">
          <pv-input-text type="text" v-model="email1" class="border-3 ml-12"/>
       </span>
@@ -89,7 +89,7 @@ export default {
   width: 100%;
   height: 700px;
   background: url("../../assets/fondo1.png");
-  border: solid #eb3349;
+
 
 }
 
@@ -107,24 +107,23 @@ img{
   font-weight: bold;
   margin-left: 50px;
   left:0px;
-  top:10px;
+  top:-20px;
   position: relative;
-  color: #667080;
+  color: #181818;
   font-family: Roboto;
-  border: solid #ffa448;
   text-align: center;
 }
 .card {
   float:left;
   width: 50%;
-  color: #667080;
+  color: #181818;
   display: flow;
   left:0px;
+  top: -30px;
   margin-left: 50px;
   top:10px;
   position: relative;
   font-family: Roboto;
-  border: solid #181818;
 }
 {
   padding: 10px 300px;
