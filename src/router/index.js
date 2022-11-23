@@ -5,6 +5,7 @@ const Appointment = () => import('../Appointments/pages/appointment.component.vu
 const Inicio = () => import('../components/inicio.vue');
 const Startsession = () => import('../Security/pages/start-session.component.vue');
 const PetProfile = () => import('../Patients/pages/pet-profile.component.vue');
+const EvaluationRegister = ()=>import('../MedicalRecords/pages/evaluation-register.component.vue');
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,10 +33,7 @@ const router = createRouter({
     {
       path: '/about',
       name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      //component: () => import('../views/AboutView.vue')
+      component: EvaluationRegister
     }
   ]
 })
