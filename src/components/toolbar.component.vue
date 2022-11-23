@@ -104,8 +104,6 @@ export default {
 
 .general{
   align-items: center;
-
-
 }
 
 
