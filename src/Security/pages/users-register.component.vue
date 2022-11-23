@@ -80,8 +80,8 @@ export default {
         {typeUser: 'Client', code: 'CL'}
       ],
 
-      User: [],
-      UseList: [],
+      usersService:null,
+
 
     }
   },
@@ -109,31 +109,43 @@ export default {
     },
 
     registerUser() {
-      this.UseList.push({
-        name: this.name,
-        userName: this.userName,
-        email: this.email,
-        password: this.password,
-        selectedType:this.selectedType,
+      this.submitted = true;
+      if (this.user.title.trim()) {
+        if (this.user.id) {
+          console.log(this.user);
+          this.user = this.getStorableUser(this.user);
+          this.usersService.update(this.user.id, this.user)
+              .then((response) => {
+                console.log(response.data.id);
 
-        toVetProfile(){
-          this.$router.push('/vetProfile');
-        },
+                //this.users[this.findIndexById(response.data.id)] =
+                   // this.getDisplayableTutorial(response.data);
+
+                this.$toast.add({severity: 'success', summary: 'Successful', detail: 'User Updated', life: 3000});
+                console.log(response);
+              });
+        } else {
+          this.user.id = 0;
+          console.log(this.user);
+          this.user = this.getStorableUser(this.user);
+          this.usersService.create(this.user).then((response) => {
+            //this.user = this.getDisplayableTutorial(response.data);
+
+            this.users.push(this.user);
+            this.$toast.add({severity: 'success', summary: 'Successful', detail: 'User Created', life: 3000});
+            console.log(response);
+          });
+        }
+        this.user = {};
+      }
+    },
 
 
-      }),
-          console.log(this.UseList)
-
-      this.name='';
-      this.userName='';
-      this.email='';
-      this.password='';
-      this.selectedType=null;
-
-      this.toVetProfile();
 
 
-    }
+
+
+
   }
 
 
