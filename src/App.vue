@@ -1,11 +1,19 @@
 <template>
 
-  <medical-record></medical-record>
+  <toolbar></toolbar>
+
+  <router-view></router-view>
 
 </template>
 
 <script>
-import MedicalRecord from "@/MedicalRecords/pages/evaluationregister.component.vue"
+
+import Toolbar from "./components/toolbar.component.vue";
+
+
+import EvaluationRegister from "./MedicalRecords/pages/evaluation-register.component.vue"
+
+
 
 export default {
   data() {
@@ -14,9 +22,17 @@ export default {
     }
   },
 
+
   components: {
-    MedicalRecord,
+    EvaluationRegister,
+    Toolbar,
+
+
   }
 }
 </script>
+
+<style>
+
+</style>
 

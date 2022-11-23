@@ -5,22 +5,22 @@
       <img src="../../assets/veterinaria1.jpg">
     </div>
     <div class="details">
-      <pv-card v-for="vet in veterinaries":key="vet.id=1" style="margin-top:10px">
+      <pv-card v-for="vet in veterinaries":key="vet.id" style="margin-top:10px">
         <template #content>
           {{vet.naming}}
         </template>
       </pv-card>
-      <pv-card v-for="vet in veterinaries":key="vet.id=1" style="margin-top:10px">
+      <pv-card v-for="vet in veterinaries":key="vet.id" style="margin-top:10px">
         <template #content>
           {{vet.lead_medic}}
         </template>
       </pv-card>
-      <pv-card v-for="vet in veterinaries":key="vet.id=1" style="margin-top:10px">
+      <pv-card v-for="vet in veterinaries":key="vet.id" style="margin-top:10px">
         <template #content>
           {{vet.addressing}}
         </template>
       </pv-card>
-      <pv-card v-for="vet in veterinaries":key="vet.id=1" style="margin-top:10px">
+      <pv-card v-for="vet in veterinaries":key="vet.id" style="margin-top:10px">
         <template #content>
           {{vet.phone}}
         </template>
@@ -30,7 +30,7 @@
           {{vet.mail}}
         </template>
       </pv-card>
-      <pv-card v-for="vet in veterinaries":key="vet.id=1" style="margin-top:10px">
+      <pv-card v-for="vet in veterinaries":key="vet.id" style="margin-top:10px">
         <template #content>
           {{vet.descrip}}
         </template>
