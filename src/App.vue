@@ -1,7 +1,7 @@
 <template>
 
   <toolbar></toolbar>
-  <evaluation-register></evaluation-register>
+
   <router-view></router-view>
 
 </template>

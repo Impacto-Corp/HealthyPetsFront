@@ -6,6 +6,8 @@ const Inicio = () => import('../components/inicio.vue');
 const Startsession = () => import('../Security/pages/start-session.component.vue');
 const PetProfile = () => import('../Patients/pages/pet-profile.component.vue');
 const EvaluationRegister = ()=>import('../MedicalRecords/pages/evaluation-register.component.vue');
+const VeterinaryRegister =()=>import('../Security/pages/veterinary-register.component.vue')
+const VetProfile =()=>import('../Profiles/pages/vet-profile.component.vue')
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -31,9 +33,14 @@ const router = createRouter({
       component: PetProfile
     },
     {
-      path: '/about',
-      name: 'about',
-      component: EvaluationRegister
+      path: '/veterinaryRegister',
+      name: 'veterinaryRegister',
+      component: VeterinaryRegister
+    },
+    {
+      path: '/vetProfile',
+      name: 'vetProfile',
+      component: VetProfile
     }
   ]
 })
