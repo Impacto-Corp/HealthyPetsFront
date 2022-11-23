@@ -46,19 +46,12 @@
 
     </div>
 
-
   </div>
 
 </template>
 
 
-
-
-
-
-
 <script>
-
 
 
 import {UsersRegisterApiService} from "../services/users-register.api.service";
