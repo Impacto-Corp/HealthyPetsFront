@@ -42,21 +42,21 @@
 </template>
 
 <script>
+import {VetsApiService} from "@/Profiles/services/vets-api.service"
 export default {
   data() {
     return {
-      "veterinaries": [
-        {
-          "id": 1,
-          "naming": "Veterinaria Lima",
-          "lead_medic": "Dr. Augusto Solano",
-          "addressing": "Jr. Velasquez 654, San Isidro, Lima",
-          "phone": "01 7543659",
-          "mail": "AugSol87@gmail.com",
-          "descrip": "Fundada en 1996, se especializa principalmente en atender emergencias veterinarias y también ofrece servicios cosméticos"
-        }
-        ]
-    }
+      veterinaries: [],
+      vet: {},
+      vetsService:null
+    };
+  },
+  created() {
+    this.vetsService = new VetsApiService();
+    this.vetsService.getAll().then((response)=>{
+      this.veterinaries=response.data;
+      console.log(this.veterinaries);
+    })
   },
   name: "vet-profile.vue"
 }
