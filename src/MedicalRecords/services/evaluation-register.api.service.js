@@ -2,12 +2,12 @@ import http from "../../core/services/http-common";
 
 export class EvaluationRegisterApiService {
     //GET
-    getEvaluations() {
-        return http.get("/evaluations");
+    getAll() {
+        return http.get('/evaluations');
     }
     //POST
-    createEvaluations(data) {
-        return http.post("/evaluations", data);
+    created(data) {
+        return http.post('/evaluations', data);
     }
     //GET BY ID
     getEvaluationsById(id) {
@@ -20,5 +20,8 @@ export class EvaluationRegisterApiService {
     //DELETE
     delete(id) {
         return http.delete(`/evaluations/${id}`);
+    }
+    findByTitle(title){
+        return http.get(`/evaluations?{title}`);
     }
 }

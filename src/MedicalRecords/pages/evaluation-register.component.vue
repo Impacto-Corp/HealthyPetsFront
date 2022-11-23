@@ -51,6 +51,8 @@
 </template>
 
 <script>
+import {EvaluationRegisterApiService} from "@/MedicalRecords/services/evaluation-register.api.service";
+
 export default {
   name: "evaluation-register.component",
 
@@ -62,21 +64,31 @@ export default {
       pet: '',
       assessment:'',
 
-
-      Evaluation:[],
-      EvaluationList:[],
+      evaluationService:null,
+      evaluation:{},
+      evaluations:[],
+      evaluationList:[],
     }
   },
 
+  created() {
+    this.evaluationService=new EvaluationRegisterApiService();
+    this.evaluationService.getAll().then((response)=>{
+      this.evaluations=response.data;
+      console.log(this.evaluations);
+    });
+    this.filter();
+  },
 
   methods:{
     registerEvaluation(){
-      this.EvaluationList.push({
+      this.evaluationList.push({
         name:this.name,
         pet:this.pet,
         assessment:this.assessment,
       }),
-          console.log(this.EvaluationList)
+
+          console.log(this.evaluationList)
       this.name='';
       this.pet='';
       this.assessment='';
