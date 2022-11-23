@@ -2,6 +2,7 @@
 
 
   <toolbar></toolbar>
+
   <router-view>
   </router-view>
 </template>
@@ -25,4 +26,8 @@ export default {
   }
 }
 </script>
+
+<style>
+
+</style>
 
