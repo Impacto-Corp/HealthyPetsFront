@@ -1,12 +1,12 @@
 <template>
 
-  <medical-record></medical-record>
+  <router-view></router-view>
+ <evaluation-register></evaluation-register>
 
 </template>
 
 <script>
-import MedicalRecord from "@/MedicalRecords/pages/evaluationregister.component.vue"
-
+import EvaluationRegister from "./MedicalRecords/pages/evaluation-register.component.vue"
 export default {
   data() {
     return {
@@ -15,7 +15,8 @@ export default {
   },
 
   components: {
-    MedicalRecord,
+    EvaluationRegister
+
   }
 }
 </script>
