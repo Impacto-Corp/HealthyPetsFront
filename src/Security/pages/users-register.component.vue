@@ -38,8 +38,8 @@
 
       <div class="b-register">
         <pv-button label="REGISTER"
-                   class="p-button-rounded p-button-secondary"
-                   @click="registerUser"
+                   class="p-button-rounded"
+                   @click="registerUser()"
         />
       </div>
 
@@ -59,15 +59,20 @@
 
 <script>
 
+
+
 import {UsersRegisterApiService} from "../services/users-register.api.service";
+import axios from "axios";
 
 export default {
   name: "user-register",
 
+  mounted() {console.log('aja')
+  },
   data() {
     return {
-
       users:[],
+      id:1,
       selectedType: null,
       name: '',
       userName: '',
@@ -93,6 +98,7 @@ export default {
       console.log(this.users);
     });
 
+
   },
 
 
@@ -108,7 +114,7 @@ export default {
       };
     },
 
-    registerUser() {
+    /*registerUser() {
       this.submitted = true;
       if (this.user.title.trim()) {
         if (this.user.id) {
@@ -138,8 +144,14 @@ export default {
         }
         this.user = {};
       }
-    },
+    },*/
 
+    registerUser() {
+
+        this.users.push(this.user);
+
+
+     }
 
 
 
