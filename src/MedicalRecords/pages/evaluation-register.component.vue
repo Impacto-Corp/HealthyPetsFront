@@ -2,10 +2,6 @@
 
   <div class="registerEvaluation">
 
-    <div class="logo1">
-      <img src="src/assets/fotovet1.png">
-    </div>
-
     <div class="content">
       <form method="register">
 
@@ -49,15 +45,6 @@
           />
         </div >
       </form>
-    </div>
-
-
-    <div>
-      <pv-card>
-        <div class="logo2">
-          <img src="src/assets/fotovet2.jpg">
-        </div>
-      </pv-card>
     </div>
   </div>
 
