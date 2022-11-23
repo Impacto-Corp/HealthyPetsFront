@@ -64,13 +64,13 @@
 </template>
 <script>
 export default {
-  name:"tool-bar",
+  name:"toolbar",
   data(){
     return{
       items: [
         {label: "Start Session", to:"/singIn"},
         {label: "User Register",to:"/userRegister"},
-        { label: "Pet Profile", to: "/petProfile" },
+        {label: "Pet Profile", to: "/petProfile" },
 
         {label: "Pet Register", to:"/petRegister"},
         {label: "Vet Profile", to:"/vetProfile"},
