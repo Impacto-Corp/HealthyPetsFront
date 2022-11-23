@@ -52,13 +52,22 @@
 </template>
 
 
+
+
+
+
+
 <script>
+
+import {UserRegisterApiService} from "../services/user-register.api.service";
+
 export default {
   name: "user-register",
 
   data() {
     return {
 
+      users:[],
       selectedType: null,
       name: '',
       userName: '',
@@ -77,6 +86,14 @@ export default {
     }
   },
 
+  created() {
+    this.userService = new UserRegisterApiService();
+    this.userService.getAll().then((response) => {
+      this.users = response.data;
+      console.log(this.users);
+    });
+
+  },
 
 
   methods: {
@@ -84,6 +101,9 @@ export default {
     toVetProfile(){
       this.$router.push('/vetProfile');
     },
+
+
+
 
     registerUser() {
       this.UseList.push({
@@ -126,7 +146,7 @@ export default {
   width: 100%;
   height: 700px;
   background: url("../../assets/fondo1.png");
-
+  font-family: Roboto;
   display: flex;
   justify-content: center;
 }
@@ -146,12 +166,14 @@ export default {
 
 #txtReg {
   margin-top: 150px;
+  font-family: Roboto;
 }
 
 .b-register {
   align-items: center;
   justify-content: center;
   margin-left: 80px;
+
 }
 
 </style>

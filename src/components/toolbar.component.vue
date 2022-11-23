@@ -49,7 +49,7 @@
               :key="item.label"
           >
             <pv-button
-                class="p-button-text text-656E81"
+                class="p-button-secondary bg-primary ml-3"
                 :href="href"
                 @click="navigate"
             >{{ item.label }}</pv-button
@@ -98,14 +98,13 @@ export default {
 }
 
 .toobal{
+  margin-top: -30px;
   height: 100px;
   align-items: center;
 }
 
 .general{
   align-items: center;
-
-
 }
 
 
