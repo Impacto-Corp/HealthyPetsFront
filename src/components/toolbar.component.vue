@@ -62,6 +62,8 @@
     </pv-toolbar>
   </div>
 </template>
+
+
 <script>
 export default {
   name:"toolbar",
@@ -75,7 +77,7 @@ export default {
         {label: "Pet Register", to:"/petRegister"},
         {label: "Vet Profile", to:"/vetProfile"},
         {label: "Veterinary Register", to:"/veterinaryRegister"},
-        {label: "Log Out", to:"/startSession"},
+        {label: "Log Out", to:"/"},
       ],
     }
   }

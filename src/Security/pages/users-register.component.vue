@@ -59,7 +59,7 @@
 
 <script>
 
-import {UserRegisterApiService} from "../services/user-register.api.service";
+import {UsersRegisterApiService} from "../services/users-register.api.service";
 
 export default {
   name: "user-register",
@@ -87,8 +87,8 @@ export default {
   },
 
   created() {
-    this.userService = new UserRegisterApiService();
-    this.userService.getAll().then((response) => {
+    this.usersService = new UsersRegisterApiService();
+    this.usersService.getAll().then((response) => {
       this.users = response.data;
       console.log(this.users);
     });
@@ -98,12 +98,15 @@ export default {
 
   methods: {
 
-    toVetProfile(){
-      this.$router.push('/vetProfile');
+    getStorableUser(displayableUser) {
+      return {
+        id: displayableUser.id,
+        name: displayableUser.name,
+        email: displayableUser.email,
+        password: displayableUser.password,
+        selectedType: displayableUser.selectedType,
+      };
     },
-
-
-
 
     registerUser() {
       this.UseList.push({

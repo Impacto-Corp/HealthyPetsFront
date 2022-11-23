@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-const UserRegisterComponent = () => import('../Security/pages/user-register.component.vue');
+const UserRegisterComponent = () => import('../Security/pages/users-register.component.vue');
 const Appointment = () => import('../Appointments/pages/appointment.component.vue');
 const Inicio = () => import('../components/inicio.vue');
 const Startsession = () => import('../Security/pages/start-session.component.vue');

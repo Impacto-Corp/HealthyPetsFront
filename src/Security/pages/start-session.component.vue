@@ -3,7 +3,7 @@
     <div class="title">
       <h2>Healthy Pets</h2>
       <p>The platform to find your ideal veterinarian</p>
-      <img src="src/assets/Logotipo.jpg">
+      <img src="src/assets/logotipo.JPG">
     </div>
 
     <div class="card">
