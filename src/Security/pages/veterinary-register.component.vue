@@ -2,16 +2,12 @@
 
   <div class="registerVeterinary">
 
-    <div class="logo1">
-      <img src="src/assets/fotovet1.png">
-    </div>
-
     <div class="content">
       <form method="register">
 
         <div class="field mt-3">
           <h2 class="ml-4 mb-5" id="txtRegV"></h2>
-            <span class="p-float-label m-3">
+          <span class="p-float-label m-3">
               <pv-input-text type="text" id="ruc" v-model.trim="ruc" class="border-3"/>
               <label for="ruc">RUC</label>
             </span>
@@ -52,31 +48,25 @@
     </div>
 
 
-    <div>
-      <pv-card>
-        <div class="logo2">
-          <img src="src/assets/fotovet2.jpg">
-        </div>
-      </pv-card>
-    </div>
+
   </div>
 
 </template>
 
 <script>
 export default {
-    name: "veterinary-register.component",
+  name: "veterinary-register.component",
 
-    data(){
-      return{
+  data(){
+    return{
 
-        selectedType: null,
-        ruc:'',
-        streetaddress: '',
-        phonenumber:'',
+      selectedType: null,
+      ruc:'',
+      streetaddress: '',
+      phonenumber:'',
 
       type:[
-          {typeVet: 'Vet', code:'VET'}
+        {typeVet: 'Vet', code:'VET'}
       ],
 
       Vet:[],
@@ -85,23 +75,23 @@ export default {
   },
 
 
-    methods:{
-      registerVet(){
+  methods:{
+    registerVet(){
       this.VetList.push({
         ruc:this.ruc,
         streetaddres:this.streetaddress,
         phonenumber:this.phonenumber,
         selectedType:this.selectedType,
       }),
-        console.log(this.VetList)
-        this.ruc='';
-        this.streetaddress='';
-        this.phonenumber='';
-        this.selectedType=null;
-      }
+          console.log(this.VetList)
+      this.ruc='';
+      this.streetaddress='';
+      this.phonenumber='';
+      this.selectedType=null;
     }
-
   }
+
+}
 </script>
 
 <style >
@@ -116,9 +106,15 @@ export default {
   height: 100vh;
   width: 100%;
 }
+.galeryimg{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
 
-.logo1{
-  max-width: 100%;
+img{
+  width: 50%;
+  object-fit:cover;
+
 }
 
 .content{

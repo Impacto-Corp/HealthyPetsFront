@@ -59,15 +59,14 @@ export default {
   data(){
     return{
 
-      selectedType: null,
       name:'',
       pet: '',
       assessment:'',
 
-      evaluationService:null,
-      evaluation:{},
       evaluations:[],
+      evaluation:{},
       evaluationList:[],
+      evaluationService:null,
     }
   },
 
@@ -75,13 +74,24 @@ export default {
     this.evaluationService=new EvaluationRegisterApiService();
     this.evaluationService.getAll().then((response)=>{
       this.evaluations=response.data;
-      console.log(this.evaluations);
+      console.log(this.evaluation);
     });
-    this.filter();
   },
 
-  methods:{
-    registerEvaluation(){
+  methods: {
+
+
+
+    getStorableEvaluations(displayableEvaluation) {
+      return {
+        id:displayableEvaluation.id,
+        name:displayableEvaluation.name,
+        pet:displayableEvaluation.pet,
+        assessment:displayableEvaluation.assessment,
+      };
+    },
+
+    registerVet(){
       this.evaluationList.push({
         name:this.name,
         pet:this.pet,
@@ -89,12 +99,12 @@ export default {
       }),
 
           console.log(this.evaluationList)
+
       this.name='';
       this.pet='';
       this.assessment='';
     }
   }
-
 }
 </script>
 
