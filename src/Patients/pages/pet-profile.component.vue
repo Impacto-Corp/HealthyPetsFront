@@ -15,7 +15,7 @@
 
 <script>
 import petCard from "/src/Patients/pages/pet-card.component.vue";
-import {PetsApiServices} from "@/Patiens/services/pets-api.service";
+import {PetsApiServices} from "../services/pets-api.service";
 
 export default {
   components: {
@@ -23,7 +23,7 @@ export default {
 
 
   },
-  name: "pet-profile",
+  name: "pets-profile",
   data() {
     return {
       petsData: [],

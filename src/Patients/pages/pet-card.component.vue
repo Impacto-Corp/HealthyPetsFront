@@ -56,7 +56,7 @@
 import axios from "axios";
 const baseUrl="http://localhost:3000/pets/";
 export default {
-  name: "pet-card",
+  name: "pets-card",
   props:{
     petData: Object,
   },
