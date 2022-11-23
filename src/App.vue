@@ -1,12 +1,19 @@
 <template>
 
+  <toolbar></toolbar>
+
   <router-view></router-view>
- <evaluation-register></evaluation-register>
 
 </template>
 
 <script>
-import EvaluationRegister from "./MedicalRecords/pages/evaluation-register.component.vue"
+
+import Toolbar from "./components/toolbar.component.vue";
+
+import StartSession from "./Security/pages/start-session.component.vue";
+
+
+
 export default {
   data() {
     return {
@@ -14,10 +21,16 @@ export default {
     }
   },
 
+
   components: {
-    EvaluationRegister
+    Toolbar,
+    StartSession,
 
   }
 }
 </script>
+
+<style>
+
+</style>
 

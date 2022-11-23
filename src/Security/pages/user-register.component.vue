@@ -3,7 +3,7 @@
   <div class="register">
 
     <div class="logo">
-      <img src="src/assets/fondo1.png">
+      <img src="src/assets/logotipo.JPG">
     </div>
 
     <div class="data">

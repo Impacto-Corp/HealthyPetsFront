@@ -37,7 +37,7 @@
 
 <script>
 export default {
-  name: "start-session.component",
+  name: "start-session",
   data() {
     return {
       email1: '',
