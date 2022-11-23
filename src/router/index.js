@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 const UserRegisterComponent = () => import('../Security/pages/user-register.component.vue');
 const Appointment = () => import('../Appointments/pages/appointment.component.vue');
 const Inicio = () => import('../components/inicio.vue');
+const Startsession = () => import('../Security/pages/start-session.component.vue');
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -16,6 +17,11 @@ const router = createRouter({
       path: '/',
       name: '',
       component: Inicio
+    },
+    {
+      path: '/singIn',
+      name: 'startSession',
+      component: Startsession
     },
     {
       path: '/about',

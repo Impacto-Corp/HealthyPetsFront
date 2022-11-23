@@ -68,7 +68,7 @@ export default {
   data(){
     return{
       items: [
-        {label: "Start Session", to:"/startSession"},
+        {label: "Start Session", to:"/singIn"},
         {label: "User Register",to:"/userRegister"},
         { label: "Pet Profile", to: "/petProfile" },
 
