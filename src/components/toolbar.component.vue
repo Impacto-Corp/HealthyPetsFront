@@ -74,7 +74,6 @@ export default {
         {label: "User Register",to:"/userRegister"},
         {label: "Pet Profile", to: "/petProfile" },
 
-        {label: "Pet Register", to:"/petRegister"},
         {label: "Vet Profile", to:"/vetProfile"},
         {label: "Veterinary Register", to:"/veterinaryRegister"},
         {label: "Log Out", to:"/"},

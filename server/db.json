@@ -46,7 +46,10 @@
       "userName": "raulvr",
       "email": "r@g",
       "password": "123",
-      "selectedType":"Vet"
+      "selectedType": "Vet"
+    },
+    {
+      "id": 2
     }
   ]
 }
